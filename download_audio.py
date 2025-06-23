@@ -44,7 +44,7 @@ def download_audio_and_transcribe():
 
         # B3: Dùng faster-whisper để chuyển audio thành text
         status_label.config(text="🧠 Đang xử lý audio bằng AI...")
-        model = WhisperModel("base")  # hoặc "small", "medium"
+        model = WhisperModel("base")
         segments, _ = model.transcribe(mp3_filename, beam_size=5)
 
         text = ""
